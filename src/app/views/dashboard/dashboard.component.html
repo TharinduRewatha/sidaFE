@@ -1,0 +1,25 @@
+<c-row>
+  <c-col xs>
+    <c-card class="mb-4">
+      <c-card-header>WELCOME TO MINDFLEET</c-card-header>
+      <c-card-body>
+        <c-row>
+          <c-col xs>
+            Get your skills tested Now! 
+            <button mat-button (click)="getScore()">GET MY SCORE</button>
+          </c-col>
+        </c-row>
+      </c-card-body>
+    </c-card>
+  </c-col>
+</c-row>
+
+<c-row *ngIf = "scoreRequested">
+  <c-col xs>
+    <c-card class="mb-4">
+      <c-card-header>You have scored {{apicalls.score}}</c-card-header>
+    </c-card>
+  </c-col>
+</c-row>
+
+<app-widgets-dropdown></app-widgets-dropdown>
